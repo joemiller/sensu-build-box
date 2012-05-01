@@ -1,0 +1,9 @@
+site "http://community.opscode.com/api/v1"
+
+cookbook "apt"
+cookbook "git"
+cookbook "apache2"
+cookbook "jenkins"
+cookbook "sensu_repo",
+  :git => "https://github.com/joemiller/chef-sensu_repo",
+  :ref => "master"
