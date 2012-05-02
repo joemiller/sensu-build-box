@@ -26,10 +26,6 @@ if [ ! -x "$chef_solo" ]; then
     curl -L http://www.opscode.com/chef/install.sh | bash
 fi
 
-# gem install librarian ?
-# git clone ... ?
-# cd chef && librarian-chef update
-
 if ! which librarian-chef >/dev/null; then
     echo "==> Librarian not installed, installing.."
     gem install librarian --no-rdoc --no-ri
