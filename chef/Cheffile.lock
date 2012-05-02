@@ -25,7 +25,7 @@ GIT
 GIT
   remote: https://github.com/joemiller/chef-sensu_repo
   ref: master
-  sha: dfb39ac9dd4f2094bf319b471aea475ae1a5a2bd
+  sha: b3faf4f395a611c64178220da8e198df79ad5777
   specs:
     sensu_repo (0.0.1)
       apt (>= 0.0.0)
