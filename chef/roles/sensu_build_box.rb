@@ -10,5 +10,5 @@ override_attributes(
   :sensu_repo => {
     :base_dir => '/repo',
     :user     => 'repo'
-  },
+  }
 )
