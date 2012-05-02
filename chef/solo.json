@@ -1,0 +1,3 @@
+{
+    "run_list": [ "role[sensu_build_box]" ]
+}
