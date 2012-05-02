@@ -37,3 +37,6 @@ fi
 
 echo "==> Running 'librarian-chef update'"
 cd chef && librarian-chef update
+
+echo "==> Running chef-solo .."
+$chef_solo -c solo.rb -j solo.json
