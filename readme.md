@@ -61,8 +61,22 @@ TODO
 
 ### Adding .deb packages
 
-TODO
+This command will add one or more .deb's to the apt repo, call `freight` to 
+process them, then call the `/repo/scripts/sync_to_s3.rb` script to sync
+the `/repo/html/` tree to S3.
+
+```
+sudo -u repo -H /repo/scripts/apt_add_debs.rb sensu_0.9.5-36_i386.deb sensu_0.9.5-36_amd64.deb
+```
+
+(`-H` is important.)
 
 ### Adding .rpm packages
 
-TODO
+This command will add one or more .rpm's to the yum repos, sign each of them
+using `rpmbuild`, update yum metadata with `createrepo`, then call the 
+`/repo/scripts/sync_to_s3.rb` script to sync the `/repo/html/` tree to S3.
+
+```
+sudo -u repo -H /repo/scripts/yum_add_rpms.rb sensu-0.9.5-36.i386.rpm sensu-0.9.5-36.x86_64.rpm
+```
