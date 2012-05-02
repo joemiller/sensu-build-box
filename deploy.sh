@@ -12,5 +12,7 @@ fi
 # we remove (-R) the old host key from known_hosts
 ssh-keygen -R "${host#*@}" 2> /dev/null
 
-rsync -a -v -z --delete-after -e "ssh -o 'StrictHostKeyChecking no'" \
+rsync -a -v -z --delete-after --exclude Attic -e "ssh -o 'StrictHostKeyChecking no'" \
     .   $host:chef
+
+ssh $host "cd chef && sudo sh bootstrap.sh"
