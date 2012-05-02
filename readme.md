@@ -19,15 +19,13 @@ Install
 
 ```
 git clone git://github.com/joemiller/sensu-build-box.git
-cd sensu-build-box
-sudo sh bootstrap.sh
 ```
 
 1-time Manual Install Steps
 ---------------------------
 
 There are some manual steps required that are not performed by the Chef recipes.
-They only need to be run once.
+They only need to be run once, after the first tiem Chef is executed.
 
 1. Install SSL key/cert for apache2.
 2. Configure S3 keys for `repo` user (`s3cmd`)
@@ -57,7 +55,14 @@ Usage
 
 ### Running chef-solo
 
-TODO
+The `run_chef.sh` script will install any distro dependencies that are needed
+(currently ubuntu specific), install the Chef omnibus package if chef is missing,
+then run `chef-solo`.
+
+```
+cd sensu-build-box
+sudo sh run_chef.sh
+```
 
 ### Adding .deb packages
 
