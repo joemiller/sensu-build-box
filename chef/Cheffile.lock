@@ -14,17 +14,28 @@ SITE
     yum (0.5.2)
 
 GIT
+  remote: https://github.com/joemiller/chef-sensu_jenkins
+  ref: master
+  sha: 8b4b7aeb7231b9f6477ce1236ce777bab7dda0ad
+  specs:
+    sensu_jenkins (0.0.1)
+      apache2 (>= 0.0.0)
+      jenkins (>= 0.0.0)
+
+GIT
   remote: https://github.com/joemiller/chef-sensu_repo
   ref: master
-  sha: 845e1a069d6d9d217258f829aad1bebc549dfd59
+  sha: dfb39ac9dd4f2094bf319b471aea475ae1a5a2bd
   specs:
     sensu_repo (0.0.1)
       apt (>= 0.0.0)
+      git (>= 0.0.0)
 
 DEPENDENCIES
   apache2 (>= 0)
   apt (>= 0)
   git (>= 0)
   jenkins (>= 0)
+  sensu_jenkins (>= 0)
   sensu_repo (>= 0)
 

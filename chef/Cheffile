@@ -7,6 +7,6 @@ cookbook "jenkins"
 cookbook "sensu_repo",
   :git => "https://github.com/joemiller/chef-sensu_repo",
   :ref => "master"
- cookbook "sensu_jenkins",
+cookbook "sensu_jenkins",
   :git => "https://github.com/joemiller/chef-sensu_jenkins",
   :ref => "master"
