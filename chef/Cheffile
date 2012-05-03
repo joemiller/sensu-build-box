@@ -10,3 +10,6 @@ cookbook "sensu_repo",
 cookbook "sensu_jenkins",
   :git => "https://github.com/joemiller/chef-sensu_jenkins",
   :ref => "master"
+cookbook "vagrant",
+  :git => "https://joemiller@github.com/joemiller/chef-vagrant.git",
+  :ref => "master"
