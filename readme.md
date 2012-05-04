@@ -88,10 +88,10 @@ using `rpmbuild`, update yum metadata with `createrepo`, then call the
 `/repo/scripts/sync_to_s3.rb` script to sync the `/repo/html/` tree to S3.
 
 ```
-## put official/final rev packages in the '/' (main) repo:
-sudo -u repo -H /repo/scripts/yum_add_rpms.rb / sensu-0.9.5-36.i386.rpm sensu-0.9.5-36.x86_64.rpm
+## put official/final rev packages in the '/yum' (main) repo:
+sudo -u repo -H /repo/scripts/yum_add_rpms.rb /yum sensu-0.9.5-36.i386.rpm sensu-0.9.5-36.x86_64.rpm
 
-## put beta/nightly packages int the '/unstable' repo:
-sudo -u repo -H /repo/scripts/yum_add_rpms.rb /unstable sensu-0.9.5.beta.1-1.i386.rpm
+## put beta/nightly packages in the '/yum-unstable' repo:
+sudo -u repo -H /repo/scripts/yum_add_rpms.rb /yum-unstable sensu-0.9.5.beta.1-1.i386.rpm
 
 ```
