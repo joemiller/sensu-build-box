@@ -6,7 +6,7 @@ cookbook "apache2"
 cookbook "jenkins"
 cookbook "sensu_repo",
   :git => "https://github.com/joemiller/chef-sensu_repo",
-  :ref => "multiple_repos"
+  :ref => "master"
 cookbook "sensu_jenkins",
   :git => "https://github.com/joemiller/chef-sensu_jenkins",
   :ref => "master"
